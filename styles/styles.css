@@ -1,0 +1,89 @@
+body {
+  align-items: center;
+  background-color: rgb(248, 248, 248);
+  color: rgb(189, 190, 188);
+  display: flex;
+  flex-direction: column;
+  font-family: "Anton", sans-serif;
+  height: 80vh;
+  justify-content: center;
+  margin: 0px;
+  min-height: 280px;
+  padding: 0px;
+  overflow: hidden;
+}
+.background {
+  background-color: rebeccapurple !important;
+  width: 100vw;
+}
+
+.dino {
+  animation: dinoWalk 0.6s steps(6) infinite;
+  background-image: url("../img/dino_sprite.png");
+  background-repeat: repeat-x;
+  bottom: 0;
+  height: 60px;
+  left: 10px;
+  position: absolute;
+  width: 58px;
+}
+
+.cactus {
+  background-image: url("../img/cactus.png");
+  bottom: 0;
+  height: 60px;
+  position: absolute;
+  width: 60px;
+}
+
+.points {
+  color: black;
+  display: block;
+  font-size: 4em;
+  left: 20vw;
+  position: absolute;
+  margin: 0 auto 0;
+  text-align: center;
+  top: -40vh;
+  width: 50vw;
+}
+
+.game-over {
+  color: #666;
+  display: flex;
+  font-size: 5em;
+  text-align: center;
+}
+
+a {
+  color: red !important;
+  font-size: 2em;
+  text-decoration: none;
+}
+
+@keyframes dinoWalk {
+  0% {
+    background-position: 0px;
+  }
+  100% {
+    background-position: -337px;
+  }
+}
+@keyframes slideRight {
+  0% {
+    background-position: 0px;
+  }
+  100% {
+    background-position: -525px;
+  }
+}
+
+.background {
+  animation: slideRight 0.95s infinite linear;
+  background-image: url("../img/background.png");
+  background-repeat: repeat-x;
+  bottom: 0px;
+  height: 200px;
+  position: absolute;
+  width: 100%;
+}
